@@ -57,8 +57,12 @@ public class Main {
 
     private static void MainRadixsort(Music[] arr){
         Radixsort rs = new RadixsortImplementation();
+        Music[] original_arr = arr;
 
-        // TODO 4.1e
+        long start = nanoTime();
+        rs.radixsort(original_arr);
+        long duration = nanoTime() - start;
+        printBar("radixsort", duration);
 
     }
 
